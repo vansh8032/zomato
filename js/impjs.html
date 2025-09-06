@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Callback 
+        // function sum(a,b){
+        //     console.log(a+b)
+        // }
+        // function detail(data,marks){
+        //     console.log("fetching data....");
+        //     setTimeout(()=>{
+        //         console.log(data);
+        //         // marks(5,5);
+        //         marks();
+        //     },3000)
+        // }
+        // detail(202,()=>{
+        //     detail(203,()=>{
+        //         detail(204,()=>{
+        //             console.log("finish")
+        //         })
+        //     })
+        // })
+
+
+        // promises and promise chaining
+
+        let a=new Promise((resolve,reject)=>{
+            console.log("fetching data....");
+            setTimeout(()=>{
+                console.log("data");
+                reject("rejected")
+            },3000)
+        })
+
+            a.then((res)=>{
+                console.log(res)
+            }).
+            a.catch((()=>{
+                console.log(err)
+            }))
+
+
+    </script>
+</body>
+
+</html>

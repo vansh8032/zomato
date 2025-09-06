@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Overlay Container Example</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    /* Container 1 (Background) */
+    .container-1 {
+      width: 100%;
+      height: 100vh;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .container-1 h1 {
+      font-size: 2em;
+      color: #333;
+    }
+
+    /* Container 2 (Overlay) */
+    .container-2 {
+      display: none; /* hidden initially */
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -30%);
+      width: 300px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      border-radius: 10px;
+      z-index: 10;
+      text-align: center;
+    }
+
+    .container-2 h2 {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container-1">
+    <h1>This is the First Container (always visible)</h1>
+
+    <!-- Overlay Container -->
+    <div class="container-2" id="overlayBox">
+      <h2>Hello!</h2>
+      <p>This is the Second Container shown on top using setTimeout.</p>
+    </div>
+  </div>
+
+  <script>
+    // Show the second container after 3 seconds
+    setTimeout(() => {
+      document.getElementById("overlayBox").style.display = "block";
+    }, 3000);
+  </script>
+
+</body>
+</html>

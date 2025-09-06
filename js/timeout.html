@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .main-3 {
+            width: 100vw;
+            height: 60vh;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-3">
+
+    </div>
+    <script>
+        // function myf(){
+        //     document.querySelector(".main-3").style.backgroundColor="red"
+        // }
+        // setTimeout(myf,4000);
+        let x = document.querySelector(".main-3");
+        x.addEventListener("click", () => {
+            setTimeout(() => {
+                document.querySelector(".main-3").style.backgroundColor = "red"
+            }, 6000);
+        })
+
+    </script>
+</body>
+
+</html>

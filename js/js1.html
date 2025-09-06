@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let detail={
+            fn:"vansh",
+            ln:"aggarwal",
+            marks:450,
+            fullname: function() {
+                return `"my full name is ${this.fn} ${this.ln}`
+            }
+        }
+        console.log(`"my full name is ${detail.fn} ${detail.ln} and marks are ${detail.marks} and ${detail.fullname()}"`)
+    </script>
+</body>
+</html>

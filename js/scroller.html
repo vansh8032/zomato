@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .main-2 {
+            width: 100vw;
+            height: 40vh;
+            /* background-color: red; */
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            padding: 10px;
+            position: relative;
+        }
+
+        .main-2 #left {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            top: 50%;
+            left: 0px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+        }
+
+        .main-2 #right {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            top: 50%;
+            right: 0px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+        }
+
+        .main-2 .section-1 {
+            /* background-color: aqua; */
+            height: 6vh;
+            font-size: 1.4em;
+            font-weight: 550;
+        }
+
+        .main-2 .section-2 {
+            height: 31.3vh;
+            display: flex;
+            overflow-x: auto;
+            overflow-y: hidden;
+            gap: 10px;
+            scroll-behavior: smooth;
+        }
+
+        .section-2>div {
+            min-width: 150px;
+            height: 100%;
+            flex-shrink: 0;
+            background-size: 100% 100%;
+        }
+
+        .main-2 .section-2 #container-1 {
+            /* background-color: aquamarine; */
+            background: url("https://m.media-amazon.com/images/I/719-ckJZDvL._AC_SY200_.jpg");
+            background-size: 100% 100%;
+        }
+
+        .main-2 .section-2 #container-2 {
+            background-color: rgb(163, 30, 165);
+            background: url("https://m.media-amazon.com/images/I/719-ckJZDvL._AC_SY200_.jpg");
+            background-size: 100% 100%;
+        }
+
+        .main-2 .section-2 #container-3 {
+            background-color: aquamarine;
+            background: url("https://m.media-amazon.com/images/I/719-ckJZDvL._AC_SY200_.jpg");
+            background-size: 100% 100%;
+        }
+
+        .main-2 .section-2 #container-4 {
+            background-color: rgb(163, 30, 165);
+            background: url("https://m.media-amazon.com/images/I/719-ckJZDvL._AC_SY200_.jpg");
+            background-size: 100% 100%;
+        }
+
+        .main-2 .section-2 #container-5 {
+            background-color: aquamarine;
+            background: url("https://m.media-amazon.com/images/I/719-ckJZDvL._AC_SY200_.jpg");
+            background-size: 100% 100%;
+        }
+
+        .main-2 .section-2 #container-6 {
+            background-color: rgb(163, 30, 165);
+            background: url("https://m.media-amazon.com/images/I/719-ckJZDvL._AC_SY200_.jpg");
+            background-size: 100% 100%;
+        }
+
+        .main-2 .section-2 #container-7 {
+            background-color: aquamarine;
+            background: url("https://m.media-amazon.com/images/I/719-ckJZDvL._AC_SY200_.jpg");
+            background-size: 100% 100%;
+        }
+
+        .main-2 .section-2 #container-8 {
+            background-color: rgb(163, 30, 165);
+            background: url("https://m.media-amazon.com/images/I/719-ckJZDvL._AC_SY200_.jpg");
+            background-size: 100% 100%;
+        }
+
+        .main-2 .section-2 #container-9 {
+            background-color: rgb(163, 30, 165);
+            background: url("https://m.media-amazon.com/images/I/719-ckJZDvL._AC_SY200_.jpg");
+            background-size: 100% 100%;
+        }
+
+        .main-2 .section-2 #container-10 {
+            background-color: rgb(163, 30, 165);
+            background: url("https://m.media-amazon.com/images/I/719-ckJZDvL._AC_SY200_.jpg");
+            background-size: 100% 100%;
+        }
+
+        .main-2 .section-2 #container-11 {
+            background-color: rgb(163, 30, 165);
+            background: url("https://m.media-amazon.com/images/I/719-ckJZDvL._AC_SY200_.jpg");
+            background-size: 100% 100%;
+        }
+        @media screen and (max-width:600px) {
+            .main-2{
+                height: 60vh;
+            }
+            .main-2 .section-1{
+                height: 10vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-2">
+        <button id="left"><</button>
+                <button id="right">></button>
+                <div class="section-1">Up to 55% off | Electronics & accessories from Amazon Launchpad</div>
+                <div class="section-2">
+                    <div id="container-1"></div>
+                    <div id="container-2"></div>
+                    <div id="container-3"></div>
+                    <div id="container-4"></div>
+                    <div id="container-5"></div>
+                    <div id="container-6"></div>
+                    <div id="container-7"></div>
+                    <div id="container-8"></div>
+                    <div id="container-9"></div>
+                    <div id="container-10"></div>
+                    <div id="container-11"></div>
+                </div>
+    </div>
+    <script>
+        let x = document.querySelector("#left");
+        let y = document.querySelector("#right");
+        let z = document.querySelector(".section-2")
+        let scrollAmount = 0;
+        const scrollPerClick = 200;
+        x.addEventListener("click", () => {
+            z.scrollBy({
+                left: -scrollPerClick,
+                behavior: "smooth"
+            });
+        });
+        y.addEventListener("click", () => {
+            z.scrollBy({
+                left: scrollPerClick,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+
+</html>

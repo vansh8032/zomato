@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Carousel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .slider-container {
+            width: 95%;
+            margin: 30px auto;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .heading {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+            /* scroll-behavior:smooth ; */
+            overflow-x: auto;
+      scroll-behavior: smooth;
+        }
+
+        .carousel img {
+            width: 200px;
+            height: 150px;
+            margin-right: 20px;
+            object-fit: contain;
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.8);
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            padding: 5px 10px;
+            z-index: 1;
+        }
+
+        .left-btn {
+            left: 0;
+        }
+
+        .right-btn {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        <div class="heading">
+            <strong>Starting ₹70,348</strong> | Set off on your next great ride 
+            <a href="#" style="color: #0073e6; font-size: 14px;">See all offers</a>
+        </div>
+
+        <button class="nav-btn left-btn">&#8249;</button>
+        <div class="carousel" id="carousel">
+            <img src="https://m.media-amazon.com/images/I/71RfLrAqGgL._AC_SY200_.jpg" alt="bike1">
+            <img src="https://m.media-amazon.com/images/I/71RfLrAqGgL._AC_SY200_.jpg" alt="bike2">
+            <img src="https://m.media-amazon.com/images/I/71RfLrAqGgL._AC_SY200_.jpg" alt="scooter">
+            <img src="https://m.media-amazon.com/images/I/71RfLrAqGgL._AC_SY200_.jpg" alt="bike3">
+            <img src="https://m.media-amazon.com/images/I/71RfLrAqGgL._AC_SY200_.jpg" alt="bike4">
+             <img src="https://m.media-amazon.com/images/I/71RfLrAqGgL._AC_SY200_.jpg" alt="bike1">
+            <img src="https://m.media-amazon.com/images/I/71RfLrAqGgL._AC_SY200_.jpg" alt="bike2">
+            <img src="https://m.media-amazon.com/images/I/71RfLrAqGgL._AC_SY200_.jpg" alt="scooter">
+            <img src="https://m.media-amazon.com/images/I/71RfLrAqGgL._AC_SY200_.jpg" alt="bike3">
+            <img src="https://m.media-amazon.com/images/I/71RfLrAqGgL._AC_SY200_.jpg" alt="bike4">
+             <img src="https://m.media-amazon.com/images/I/71RfLrAqGgL._AC_SY200_.jpg" alt="bike1">
+            <img src="https://m.media-amazon.com/images/I/71RfLrAqGgL._AC_SY200_.jpg" alt="bike2">
+            <img src="https://m.media-amazon.com/images/I/71RfLrAqGgL._AC_SY200_.jpg" alt="scooter">
+            <img src="https://m.media-amazon.com/images/I/71RfLrAqGgL._AC_SY200_.jpg" alt="bike3">
+            <img src="https://m.media-amazon.com/images/I/71RfLrAqGgL._AC_SY200_.jpg" alt="bike4">
+        </div>
+        <button class="nav-btn right-btn">&#8250;</button>
+    </div>
+
+    <script>
+        const carousel = document.getElementById("carousel");
+        const leftBtn = document.querySelector(".left-btn");
+        const rightBtn = document.querySelector(".right-btn");
+
+        let scrollAmount = 0;
+        const scrollPerClick = 100;
+
+        rightBtn.addEventListener("click", () => {
+            carousel.scrollBy({
+                left: scrollPerClick,
+                behavior: "smooth"
+            });
+        });
+
+        leftBtn.addEventListener("click", () => {
+            carousel.scrollBy({
+                left: -scrollPerClick,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+</body>
+</html>

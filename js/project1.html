@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .main-container-1 {
+            width: 100vw;
+            height: 50vh;
+            /* background-color: aqua; */
+        }
+
+        .main-container-2 {
+            width: 100vw;
+            height: 50vh;
+            /* background-color: rgb(0, 0, 0); */
+            display: grid;
+            grid-template-columns: 30% 30% 30%;
+            column-gap: 2em;
+            justify-content: center;
+        }
+        .main-container-2 #part-1{
+            height: 50vh;
+            /* background-color: aquamarine; */
+            display: grid;
+            grid-template-rows: auto auto;
+        }
+        .main-container-2 #part-1 #subpart-1{
+            height:30vh;
+            background-color: blue;
+        }
+        .main-container-2 #part-1 #subpart-2{
+            height:20vh;
+            /* background-color: rgb(121, 121, 141); */
+            display: grid;
+            justify-content: center;
+        }
+        .main-container-2 #part-1 #subpart-2 h5{
+            font-size: 2.5em;
+            text-align: center;
+        }
+        .main-container-2 #part-1 #subpart-2 button{
+            font-size: 1.5em;
+            text-align: center;
+        }
+        .main-container-2 #part-2{
+            height: 50vh;
+            /* background-color: rgb(138, 53, 174); */
+            
+        }
+        .main-container-2 #part-2 #subpart-1{
+            height:30vh;
+            background-color: rgb(37, 192, 53);
+            
+        }
+        .main-container-2 #part-2 #subpart-2{
+            height:20vh;
+            /* background-color: rgb(190, 60, 180); */
+            display: grid;
+            justify-content: center;
+        }
+        .main-container-2 #part-2 #subpart-2 h5{
+            font-size: 2.5em;
+            text-align: center;
+        }
+        .main-container-2 #part-2 #subpart-2 button{
+            font-size: 1.5em;
+            text-align: center;
+        }
+        .main-container-2 #part-3{
+            height: 50vh;
+            /* background-color: rgb(135, 179, 25); */
+        }
+        .main-container-2 #part-3 #subpart-1{
+            height:30vh;
+            /* background-color: rgb(244, 142, 148); */
+        }
+        .main-container-2 #part-3 #subpart-2{
+            height:20vh;
+            /* background-color: rgb(202, 38, 90); */
+            display: grid;
+            justify-content: center;
+        }
+        .main-container-2 #part-3 #subpart-2 h5{
+            font-size: 2.5em;
+            text-align: center;
+        }
+        .main-container-2 #part-3 #subpart-2 button{
+            font-size: 1.5em;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="main-container-1">
+    </div>
+    <div class="main-container-2">
+        <div id="part-1">
+            <div id="subpart-1">
+                
+            </div>
+            <div id="subpart-2">
+                <h5>Hyper Text Markup Language</h5>
+                <button>Read More...</button>
+            </div>
+        </div>
+        <div id="part-2">
+            <div id="subpart-1"></div>
+            <div id="subpart-2">
+                <h5>Cascading style sheets </h5>
+                 <button>Read More...</button>
+            </div>
+        </div>
+        <div id="part-3">
+            <div id="subpart-1"></div>
+            <div id="subpart-2">
+                <h5>Jawa Script</h5>
+                 <button>Read More...</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        // console.log(document.body);
+        document.body.firstElementChild.style.backgroundImage = "url('https://www.mooc.org/hs-fs/hubfs/learn-programming-career-jpg.jpeg?width=500&name=learn-programming-career-jpg.jpeg')";
+
+        document.body.firstElementChild.style.backgroundSize = "100% 100%";
+
+        document.body.children[1].firstElementChild.children[0].style.backgroundImage="url('https://nestify.io/wp-content/uploads/2024/01/What-is-HTML.jpg')";
+
+        document.body.children[1].firstElementChild.children[0].style.backgroundSize="100% 100%";
+
+        document.body.children[1].children[1].children[0].style.backgroundImage="url('https://cdn.mos.cms.futurecdn.net/Vp9WvV7YKdH4k8sKRePcE8.jpg')";
+
+        document.body.children[1].children[1].children[0].style.backgroundSize="100% 100%";
+
+        document.body.children[1].children[2].children[0].style.backgroundImage="url('https://miro.medium.com/v2/resize:fit:1200/1*LyZcwuLWv2FArOumCxobpA.png')";
+
+        document.body.children[1].children[2].children[0].style.backgroundSize="100% 100%";
+    </script>
+</body>
+
+</html>

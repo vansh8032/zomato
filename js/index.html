@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="main" style="display: block;">
+        <div class="container1">box1</div>
+        <div class="container2">box2</div>
+        <div class="container3">box3</div>
+        <button id="btn">click me</button>
+    </div>
+    <script>
+        let d=document.createElement('div');
+        d.innerHTML="my name is vansh";
+        document.querySelector(".main").append(d);
+        let b=document.getElementById("btn");
+        b.addEventListener("click",()=>{
+            alert("you clicked me")
+        })
+    </script>
+</body>
+</html>
